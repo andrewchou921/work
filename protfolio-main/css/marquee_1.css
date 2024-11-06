@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/*!
+* Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
+*/
+/*!
+ * Bootstrap  v5.2.3 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    background-color: rgb(145, 210, 248);
+    font-size: 20px;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+  
+  .marquee-content2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee2 10s linear infinite;
+  }
+  .marquee-content3 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee2 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee3 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
