@@ -443,45 +443,30 @@
                     <h2 class="section-heading text-uppercase">聯絡我</h2>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form action="" method="POST" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSfqtx_UaW2uTTKodKQXkGIqjWofNCC1HTV5K1KTey7KT_mRqA/formResponse" method="POST" id="contactForm">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="您的名字 *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">需要填寫一個名字</div>
+                                <input class="form-control" id="name" name="entry.1792913701" type="text" placeholder="您的名字 *" required />
+                                <div class="invalid-feedback">需要填寫一個名字</div>
                             </div>
                             <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="您的Email信箱 *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">需要填寫一個Email信箱</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email信箱無效</div>
+                                <input class="form-control" id="email" name="entry.1649951509" type="email" placeholder="您的Email信箱 *" required />
+                                <div class="invalid-feedback">需要填寫一個Email信箱</div>
+                                <div class="invalid-feedback">Email信箱無效</div>
                             </div>
                             <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="您的手機號碼 *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">需要填寫一個手機號碼</div>
+                                <input class="form-control" id="phone" name="entry.1387575911" type="tel" placeholder="您的手機號碼 *" required />
+                                <div class="invalid-feedback">需要填寫一個手機號碼</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="寫下您的訊息*" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">訊息無效</div>
+                                <textarea class="form-control" id="message" name="entry.741055817" placeholder="寫下您的訊息*" required></textarea>
+                                <div class="invalid-feedback">訊息無效</div>
                             </div>
                         </div>
                     </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3">
                             <div class="fw-bolder">訊息提交完成</div>
@@ -490,16 +475,16 @@
                             <a href="//"></a>
                         </div>
                     </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">傳送訊息</button></div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">傳送訊息</button>
+                    </div>
                 </form>
             </div>
         </section>
+        
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
