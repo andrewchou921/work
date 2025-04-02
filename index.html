@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="設計不僅僅是外表，更是一種體驗的創造。你好我是周得智(Andrew)﻿，畢業於淡江大學教育科技系，擁有強烈的求知慾望與學習力，勇於應對任何挑戰。
+        <meta name="description" content="設計不僅僅是外表，更是一種體驗的創造。你好我是Andrew，擁有強烈的求知慾望與學習力，勇於應對任何挑戰。
         在學期間，累積豐富團隊經驗，以細心方式協作，以實際行動表現對任務的承擔，透過有效溝通確保團隊協作。善於發現細節中的機會，營造合作共榮的工作環境。」" />
          
         <!-- Open Graph 基本標籤 -->
         <meta property="og:title" content="Andrew Website">
-        <meta property="og:description" content="設計不僅僅是外表，更是一種體驗的創造。你好我是周得智(Andrew)﻿，畢業於淡江大學教育科技系，擁有強烈的求知慾望與學習力，勇於應對任何挑戰。 在學期間，累積豐富團隊經驗，以細心方式協作，以實際行動表現對任務的承擔，透過有效溝通確保團隊協作。善於發現細節中的機會，營造合作共榮的工作環境。」">
-        <meta name="keywords" content="周得智,淡江,教育科技,設計,淡江教育科技,華碩人資,Andrew chou,網頁設計,周得智的作品集">
+        <meta property="og:description" content="設計不僅僅是外表，更是一種體驗的創造。你好我是安卓(Andrew)，擁有強烈的求知慾望與學習力，勇於應對任何挑戰。 在學期間，累積豐富團隊經驗，以細心方式協作，以實際行動表現對任務的承擔，透過有效溝通確保團隊協作。善於發現細節中的機會，營造合作共榮的工作環境。」">
+        <meta name="keywords" content="Andrew,淡江,教育科技,設計,淡江教育科技,華碩人資,Andrew chou,網頁設計,安卓的作品集">
         <meta property="og:image" content="https://andrewchou921.github.io/protfolio/assets/img/portfolio/9.jpg">
         <meta property="og:url" content="https://andrewchou921.github.io/protfolio/assets/img/portfolio/9.jpg">
         <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
            gtag('config', 'G-FLZN6Z1EL1');
          </script>
         
-        <title>周得智 設計師作品集網頁</title>
+        <title>安卓(Andrew)設計師作品集網頁</title>
         
         <link href="assets/img/favicon.ico.ico" rel="shortcut icon"/>
         <!-- Favicon-->
@@ -102,7 +102,7 @@
             <div class="container" >
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">作品集</h2>
-                    <h3 class="section-subheading text-muted">內容包含uiux、網頁、平面與3D等視覺設計</h3>
+                    <h3 class="section-subheading text-muted">內容包含uiux、網頁、平面與3D等視覺設計<br>(點開可查看專案詳細過程)</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -274,7 +274,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 text-center" data-aos="fade-up">
                         <!-- 自拍照 -->
                         <div class="slideshow">
-                           <img src="assets/img/about/myself.jpg" alt="" class="img-fluid about-pic" loading="lazy">
+                           <img src="assets/img/about/myself6.jpg" alt="" class="img-fluid about-pic" loading="lazy">
                            <img src="assets/img/about/myself-2.jpg" alt="" class="img-fluid about-pic" loading="lazy">
                            <img src="assets/img/about/myself4.webp" alt="" class="img-fluid about-pic" loading="lazy">
                         </div>
@@ -282,14 +282,14 @@
                         <div>
                            <h2 class="text-center mb-1 mt-3">Andrew</h4>
                            <h6 class="text-center mb-3">Junior Designer</h6>
-                           <h3 class="section-subheading text-muted fontsi"> <a href="assets/2023.pdf" download="2023.pdf">下載我的履歷</a></h3>
+                           <h3 class="section-subheading text-muted fontsi"><a href="#" onclick="checkPassword()">下載我的履歷</a></h3>
                          </div>
                     </div>
                     
                     <div class="col-lg-6 col-md-6 col-sm-12 text-center">   
                         <div>
                             <h2 class="typing2">“在迭代中 堅持實踐的勇氣”</h2>
-                            <h6><span class="about-text mt-3">學歷 </span>淡江大學 教育科技系</h6>
+                            <!-- <h6><span class="about-text mt-3">學歷 </span>淡江大學 教育科技系</h6> -->
                             <p><span class="about-text mt-3">介紹</span>
                                 <Span class="text-start d-block px-5" >INFP調停者，把設計當成生活的一部分，喜歡與人分享新奇的事物，最近覺得寫網頁是一件很酷且有趣的事，
                                 所以正在精進中!希望透過每天的學習，發現自己更好的一面。
@@ -979,7 +979,20 @@
                 });
               });
         </script>
-
+       
+       <!-- 被你發現了...沒有後端先用前端代替 -->
+       <script>
+        function checkPassword() {
+            const password = prompt("請輸入密碼以下載履歷：");
+            const correctPassword = "04535"; // 設定密碼
+        
+            if (password === correctPassword) {
+                window.open("assets/2023.pdf", "_blank"); // 以新分頁開啟履歷
+            } else {
+                alert("密碼錯誤，請再試一次！");
+            }
+        }
+        </script>
     
         
         <!-- Bootstrap core JS-->
