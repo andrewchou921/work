@@ -118,4 +118,29 @@ window.addEventListener('scroll', function() {
 });
 
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cursor = document.getElementById('myCursor');
+  
+  
+
+  // 收集所有目標元素：和 portfolio-item
+  const targets = [
+    ...document.querySelectorAll('.portfolio-item')
+  ];
+
+  // 為每個目標加入 hover 效果
+  targets.forEach(target => {
+    target.addEventListener('mouseenter', () => {
+      cursor.classList.add('hovering');
+    });
+    target.addEventListener('mouseleave', () => {
+      cursor.classList.remove('hovering');
+    });
+  });
+});
+
+
+
   

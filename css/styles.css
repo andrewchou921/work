@@ -11444,23 +11444,38 @@ html, body {
   cursor: none; /* 隱藏滑鼠 */
 }
 
+body.hovering {
+  cursor: none; /* 強制 hover 狀態下也隱藏原生游標 */
+}
+
 
 #myCursor {
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 0, 0.7); /* 黄色透明度降低20% */
+  background-color: rgba(255, 255, 0, 0.9); /* 黄色透明度降低20% */
   border-radius: 50%;
   position: absolute;
   pointer-events: none; /* 使游標不影響頁面交互 */
   z-index: 9999; /* 确保游标在最顶层 */
-  transition: transform 0.9s ease-out; /* 添加延迟效果 */
-}
+    
+  /* transition 放在這裡，hover 進出都有效果 */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
 
 @media (max-width: 768px) {
   #myCursor {
     display: none;
   }
 }
+
+
+/* 碰到物件時放大 */
+#myCursor.hovering {
+  transform: scale(2.3);
+  background-color: rgba(30, 78, 245, 0.9); /* 也可以改顏色 */
+ }
+
 
 
 .about{
@@ -11553,4 +11568,13 @@ html, body {
   .scroll_down {
       bottom: 10px;
   }
+}
+
+
+/* 隱藏鼠標 */
+a,
+button,
+img,
+.portfolio-item {
+  cursor: none !important;
 }
