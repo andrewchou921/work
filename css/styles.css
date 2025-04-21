@@ -11181,6 +11181,9 @@ header.masthead .masthead-heading {
 .portfolio-modal .modal-content img {
   margin-bottom: 2rem;
 }
+.portfolio-modal .modal-content img.no-margin {
+  margin-bottom: 0rem;
+}
 .portfolio-modal .close-modal {
   position: absolute;
   top: 1.5rem;
