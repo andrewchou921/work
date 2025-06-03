@@ -104,8 +104,14 @@
                     <h2 class="section-heading text-uppercase">作品集</h2>
                     <h3 class="section-subheading text-muted">內容包含uiux、網頁、平面與3D等視覺設計<br>(點開可查看專案詳細過程)</h3>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="text-center mb-4">
+                  <button class="btn btn-outline-dark mx-1 filter-button" data-filter="*">全部</button>
+                  <button class="btn btn-outline-dark mx-1 filter-button" data-filter="web">Web</button>
+                  <button class="btn btn-outline-dark mx-1 filter-button" data-filter="uiux">UIUX</button>
+                  <button class="btn btn-outline-dark mx-1 filter-button" data-filter="graphic">平面設計</button>
+                </div>
+                <div class="row" id="portfolio-grid">
+                    <div class="col-lg-4 col-sm-6 mb-4 web">
                          <!-- Portfolio item NEW-->
                          <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal0">
@@ -121,7 +127,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4 web">
                         <!-- Portfolio item NEW-->
                         <div class="portfolio-item" data-aos="fade-up">
                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal-todo">
@@ -137,7 +143,7 @@
                        </div>
                    </div>
 
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4 uiux">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
@@ -152,7 +158,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4 uiux">
                         <!-- Portfolio item 2-->
                         <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
@@ -167,7 +173,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4 web">
                         <!-- Portfolio item 3-->
                         <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
@@ -182,7 +188,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 web">
                         <!-- Portfolio item 4-->
                         <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
@@ -197,7 +203,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0 graphic">
                         <!-- Portfolio item 5-->
                         <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
@@ -212,7 +218,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4 graphic">
                         <!-- Portfolio item 6-->
                         <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
@@ -227,7 +233,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4 graphic">
                         <!-- Portfolio item 7-->
                         <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
@@ -243,7 +249,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4 graphic">
                         <!-- Portfolio item 9-->
                         <div class="portfolio-item" data-aos="fade-up">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
@@ -1019,5 +1025,44 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+      <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.filter-button');
+    const items = document.querySelectorAll('#portfolio-grid > div');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const filter = this.getAttribute('data-filter');
+
+        // 切換按鈕樣式
+        buttons.forEach(btn => {
+          btn.classList.remove('btn-primary');
+          btn.classList.add('btn-outline-primary');
+        });
+        this.classList.add('btn-primary');
+        this.classList.remove('btn-outline-primary');
+
+        // 顯示/隱藏項目 + 加動畫
+        items.forEach(item => {
+          if (filter === '*' || item.classList.contains(filter)) {
+            item.classList.remove('d-none');
+
+            // 移除舊動畫 class 強制觸發動畫
+            item.classList.remove('animate-zoom');
+            void item.offsetWidth; // 強制 Reflow
+            item.classList.add('animate-zoom');
+          } else {
+            item.classList.add('d-none');
+          }
+        });
+
+        // AOS 滾動動畫強制刷新（如果你同時還有使用 AOS）
+        AOS.refreshHard();
+      });
+    });
+  });
+</script>
+
     </body>
 </html>
