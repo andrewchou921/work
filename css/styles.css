@@ -11597,3 +11597,9 @@ img,
 .animate-zoom {
   animation: zoomIn 0.7s ease;
 }
+
+@media (max-width: 576px) {
+  .animate-zoom {
+    animation: zoomIn 0.5s ease forwards;
+  }
+}
